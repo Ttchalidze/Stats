@@ -4,15 +4,24 @@
  */
 function getLength(numbers) {
   // TODO
+  const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+  console.log(numbers.length);
 }
-
+/** output in console (9) */
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number} the sum of the numbers
  */
 function getSum(numbers) {
   // TODO
+  const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+  let numberssum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    numberssum += numbers[i];
+  }
+  console.log(numberssum);
 }
+/** output in console (36) */
 
 /**
  * @param {number[]} numbers an array of integers
@@ -20,7 +29,16 @@ function getSum(numbers) {
  */
 function getMean(numbers) {
   // TODO
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  return sum / numbers.length;
 }
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+getMean(numbers);
+
+/** output in console (4.5) */
 
 /**
  * @param {number[]} numbers an array of integers
@@ -28,7 +46,18 @@ function getMean(numbers) {
  */
 function getMin(numbers) {
   // TODO
+  const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+  let numbersmin = numbers[0];
+
+  for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] < numbersmin) {
+      numbersmin = numbers[i];
+    }
+  }
+  console.log(numbersmin);
 }
+
+/** output in console (1) */
 
 /**
  * @param {number[]} numbers an array of integers
@@ -36,14 +65,31 @@ function getMin(numbers) {
  */
 function getMax(numbers) {
   // TODO
-}
+  const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+  let numbersmax = numbers[0];
 
+  for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] > numbersmax) {
+      numbersmax = numbers[i];
+    }
+  }
+  console.log(numbersmax);
+}
+/** ouput in console 8 */
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number} the range of the numbers (max - min)
  */
 function getRange(numbers) {
   // TODO
+  const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+  const arrayRange = (start, stop, step) =>
+    Array.from(
+      { length: (stop - start) / step + 1 },
+      (value, index) => start + index * step
+    );
+
+  console.log(arrayRange(1, 8, 1));
 }
 
 /**
@@ -52,16 +98,22 @@ function getRange(numbers) {
  */
 function getEvens(numbers) {
   // TODO
+  const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+  const numberseven = numbers.filter((number) => number % 2 === 0);
+  console.log(numberseven);
 }
-
+/** ouput in console */
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number[]} the odd numbers in the array
  */
 function getOdds(numbers) {
   // TODO
+  const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+  const numbersodd = numbers.filter((number) => number % 2 !== 0);
+  console.log(numbersodd);
 }
-
+/** output in console (1,3,5,9) */
 // === READ BUT DO NOT EDIT THE CODE BELOW ===
 
 /**
