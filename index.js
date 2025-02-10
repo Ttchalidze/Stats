@@ -5,9 +5,9 @@
 function getLength(numbers) {
   // TODO
   const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-  console.log(numbers.length);
+  return numbers.length;
 }
-/** output in console (9) */
+
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number} the sum of the numbers
@@ -19,9 +19,8 @@ function getSum(numbers) {
   for (let i = 0; i < numbers.length; i++) {
     numberssum += numbers[i];
   }
-  console.log(numberssum);
+  return numberssum;
 }
-/** output in console (36) */
 
 /**
  * @param {number[]} numbers an array of integers
@@ -35,10 +34,6 @@ function getMean(numbers) {
   }
   return sum / numbers.length;
 }
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-getMean(numbers);
-
-/** output in console (4.5) */
 
 /**
  * @param {number[]} numbers an array of integers
@@ -54,7 +49,7 @@ function getMin(numbers) {
       numbersmin = numbers[i];
     }
   }
-  console.log(numbersmin);
+  return numbersmin;
 }
 
 /** output in console (1) */
@@ -73,7 +68,7 @@ function getMax(numbers) {
       numbersmax = numbers[i];
     }
   }
-  console.log(numbersmax);
+  return numbersmax;
 }
 /** ouput in console 8 */
 /**
@@ -83,13 +78,9 @@ function getMax(numbers) {
 function getRange(numbers) {
   // TODO
   const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-  const arrayRange = (start, stop, step) =>
-    Array.from(
-      { length: (stop - start) / step + 1 },
-      (value, index) => start + index * step
-    );
-
-  console.log(arrayRange(1, 8, 1));
+  const max = getMax(numbers);
+  const min = getMin(numbers);
+  return max - min;
 }
 
 /**
@@ -99,8 +90,7 @@ function getRange(numbers) {
 function getEvens(numbers) {
   // TODO
   const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-  const numberseven = numbers.filter((number) => number % 2 === 0);
-  console.log(numberseven);
+  return (numberseven = numbers.filter((number) => number % 2 === 0));
 }
 /** ouput in console */
 /**
@@ -110,8 +100,7 @@ function getEvens(numbers) {
 function getOdds(numbers) {
   // TODO
   const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-  const numbersodd = numbers.filter((number) => number % 2 !== 0);
-  console.log(numbersodd);
+  return (numbersodd = numbers.filter((number) => number % 2 !== 0));
 }
 /** output in console (1,3,5,9) */
 // === READ BUT DO NOT EDIT THE CODE BELOW ===
